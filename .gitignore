@@ -1,0 +1,13 @@
+# 忽略 IDEA 特有的配置文件夹和文件
+.idea/
+*.iml
+
+# 忽略 Java 编译生成的输出目录
+out/
+target/
+
+# 忽略编译后的 class 文件
+*.class
+
+# 忽略系统自带的隐藏文件（如 Mac 的 DS_Store）
+.DS_Store
