@@ -6,14 +6,16 @@ import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
-        MatrixRotate matrixRotate = new MatrixRotate();
-        int[][] matrix = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
-        matrixRotate.rotate2(matrix);
-        for (int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix[0].length; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        SearchInMatrix searchInMatrix = new SearchInMatrix();
+        int[][] matrix = new int[][]{
+                {1,3,5,7,9},
+                {2,4,6,8,10},
+                {11,13,15,17,19},
+                {12,14,16,18,20},
+                {21,22,23,24,25}
+        };
+        int target = 0;
+        boolean sign = searchInMatrix.searchMatrix(matrix, target);
+        System.out.println(sign);
     }
 }
