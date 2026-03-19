@@ -1,4 +1,5 @@
 package main;
+import pojo.ListNode;
 import questions.*;
 
 import java.util.List;
@@ -6,16 +7,22 @@ import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
-        SearchInMatrix searchInMatrix = new SearchInMatrix();
-        int[][] matrix = new int[][]{
-                {1,3,5,7,9},
-                {2,4,6,8,10},
-                {11,13,15,17,19},
-                {12,14,16,18,20},
-                {21,22,23,24,25}
-        };
-        int target = 0;
-        boolean sign = searchInMatrix.searchMatrix(matrix, target);
-        System.out.println(sign);
+        ListReverse listReverse = new ListReverse();
+
+        ListNode head = new ListNode(1, null);
+        ListNode pNode = head;
+
+        for (int i = 1; i < 5; i++){
+            ListNode node = new ListNode(i + 1, null);
+            pNode.next = node;
+            pNode = node;
+        }
+
+        ListNode reversedList = listReverse.reverseList(head);
+        pNode = reversedList;
+        while (pNode != null){
+            System.out.print(pNode.val + " ");
+            pNode = pNode.next;
+        }
     }
 }
