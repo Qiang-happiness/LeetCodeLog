@@ -24,24 +24,24 @@ public class CycleLinkList {
     }
 
     //优化方法、快慢指针
-    public boolean hasCycle2(ListNode head) {
-        ListNode slow = head, fast = new ListNode();
-        if (slow != null){
-            fast = head.next;
-        }
-        while (slow != null && fast != null && slow != fast){
-            slow = slow.next;
-            if (fast.next != null){
-                fast = fast.next.next;
-            }else {
-                fast = null;
-            }
-        }
-
-        if (slow == fast){
-            return true;
-        }else {
-            return false;
-        }
-    }
+//    public boolean hasCycle2(ListNode head) {
+//        ListNode slow = head, fast = null;
+//        if (slow != null){
+//            fast = head.next;
+//        }
+//        while (slow != null && fast != null && slow != fast){
+//            slow = slow.next;
+//            if (fast.next != null){
+//                fast = fast.next.next;
+//            }else {
+//                fast = null;
+//            }
+//        }
+//
+//        if (slow == fast){
+//            return true;
+//        }else {
+//            return false;
+//        }
+//    }
 }
