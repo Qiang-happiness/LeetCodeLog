@@ -7,22 +7,15 @@ import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
-        ListReverse listReverse = new ListReverse();
+        CycleLinkList cycleLinkList  = new CycleLinkList();
 
-        ListNode head = new ListNode(1, null);
-        ListNode pNode = head;
+        ListNode node3 = new ListNode(-4);
+        ListNode node2 = new ListNode(0, node3);
+        ListNode node1 = new ListNode(2, node2);
+        ListNode node0 = new ListNode(3, node1);
+        node3.next = node1;
 
-        for (int i = 1; i < 5; i++){
-            ListNode node = new ListNode(i + 1, null);
-            pNode.next = node;
-            pNode = node;
-        }
-
-        ListNode reversedList = listReverse.reverseList(head);
-        pNode = reversedList;
-        while (pNode != null){
-            System.out.print(pNode.val + " ");
-            pNode = pNode.next;
-        }
+        boolean tag = cycleLinkList.hasCycle2(node0);
+        System.out.println(tag);
     }
 }
