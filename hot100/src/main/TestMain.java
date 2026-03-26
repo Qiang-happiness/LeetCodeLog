@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
-        NthFromEndRemove nthFromEndRemove = new NthFromEndRemove();
+        KGroupReverse kGroupReverse = new KGroupReverse();
 
         ListNode node0 = new ListNode(1);
         ListNode node1 = new ListNode(2);
@@ -19,7 +19,7 @@ public class TestMain {
         node2.next = node3;
         node3.next = node4;
 
-        ListNode node = nthFromEndRemove.removeNthFromEnd(node0, 2);
+        ListNode node = kGroupReverse.reverseKGroup2(node0, 3);
 
         while (node != null) {
             System.out.println(node.val);
