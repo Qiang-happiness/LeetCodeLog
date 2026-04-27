@@ -8,27 +8,23 @@ import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
-        RandomListCopy randomListCopy = new RandomListCopy();
+        SortListASC sortListASC = new SortListASC();
 
-        Node node0 = new Node(1);
-        Node node1 = new Node(2);
-        Node node2 = new Node(3);
-//        ListNode node1 = new ListNode(2);
-//        ListNode node2 = new ListNode(3);
-//        ListNode node3 = new ListNode(4);
-//        ListNode node4 = new ListNode(5);
-        node0.next = node1;
+        ListNode node1 = new ListNode(4);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(1);
+        ListNode node4 = new ListNode(3);
+        ListNode node5 = new ListNode(5);
+
         node1.next = node2;
-//        node2.next = node3;
-//        node3.next = node4;
+        node2.next = node3;
+        node3.next = node4;
+//        node4.next = node5;
 
-        Node node = randomListCopy.copyRandomList2(node0);
+        ListNode node = sortListASC.sortList(node1);
 
-        while (node != null) {
-            if (node.random != null){
-                System.out.println(node.val + " " + node.random.val);
-            }
-            System.out.println(node.val + " " + "null");
+        while (node != null){
+            System.out.print(node.val + " ");
             node = node.next;
         }
     }
